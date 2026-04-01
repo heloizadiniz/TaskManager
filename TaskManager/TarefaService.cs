@@ -79,10 +79,11 @@ namespace TaskManager
                 tarefas = JsonSerializer.Deserialize<List<Tarefa>>(json) ?? new List<Tarefa>();
             }
 
-        } public int QuantidadeTarefas()
-{
-    return tarefas.Count;
-}
+        }
+        public int QuantidadeTarefas()
+        {
+            return tarefas.Count;
+        }
 
     }
 
