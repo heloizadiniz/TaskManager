@@ -25,7 +25,7 @@ Qualquer pessoa que deseja organizar melhor sua rotina.
 
 ## ▶️ Como executar
 1. Clone o repositório:
-1. 2. Abra no Visual Studio
+1. Abra no Visual Studio
 3. Execute o projeto
 
 ## 🧪Como rodar os testes
