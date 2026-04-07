@@ -1,15 +1,15 @@
-﻿Organizador de Tarefas
+﻿📝Organizador de Tarefas
 
-Descrição
+🖋️Descrição :
 Este projeto é uma aplicação em C# , no visual estudio code 2022, desenvolvida para ajudar na organização de tarefas do dia a dia. Ele permite ao usuário adicionar, listar e remover tarefas de forma simples através do terminal.
 
-Problema
+📌Problema :
 Muitas pessoas têm dificuldade em organizar suas tarefas diárias, o que pode gerar desorganização e perda de produtividade.
 
-Solução
+💡Solução :
 A aplicação oferece um gerenciador de tarefas simples, que permite registrar e acompanhar atividades de forma prática. Adcionando, Listando e Removendo tarefas, o usuário pode manter sua rotina organizada e aumentar sua produtividade.
 
-Público-alvo
+👥 Público-alvo :
 Qualquer pessoa que deseja organizar melhor sua rotina.
 
  ⚙️Funcionalidades
@@ -18,29 +18,29 @@ Qualquer pessoa que deseja organizar melhor sua rotina.
 - Remover tarefas
 - Armazenamento em arquivo JSON
 
-Tecnologias utilizadas
+🖥️ Tecnologias utilizadas
 - C#
 -.NET
 - xUnit (testes automatizados)
 
-Como executar
+▶️ Como executar
 1. Clone o repositório:
 1. Abra no Visual Studio 2022
 3. Execute o projeto
 
-Como rodar os testes
-No Visual Studio:
+▶️ Como rodar os testes
+No Visual Studio 2022 
 - Vá em Test Explorer
 - Clique em "Run All"
 
-Lint
+📌 Lint :
 dotnet format
 
- 📦Versão
+ 📦 Versão: 
 1.0.0
 
-Autora
+👩‍💻 Autora:
 Heloiza Diniz Figueredo
 
-Link Github
+🔗 Link Github :
 https://github.com/heloizadiniz/TaskManager
