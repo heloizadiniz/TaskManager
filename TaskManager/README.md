@@ -1,4 +1,4 @@
-﻿## 📝Organizador de Tarefas
+﻿#Organizador de Tarefas
 
 ## 📌Descrição
 Este projeto é uma aplicação em C# desenvolvida para ajudar na organização de tarefas do dia a dia. Ele permite ao usuário adicionar, listar e remover tarefas de forma simples através do terminal.
