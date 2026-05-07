@@ -1,45 +1,95 @@
-﻿## 📝Organizador de Tarefas
+﻿# Organizador de Tarefas
 
-## 📌Descrição
-Este projeto é uma aplicação em C# desenvolvida para ajudar na organização de tarefas do dia a dia. Ele permite ao usuário adicionar, listar e remover tarefas de forma simples através do terminal.
+## Link do Deploy
+(cole aqui o link depois do deploy)
 
-## 📌Problema
-Muitas pessoas têm dificuldade em organizar suas tarefas diárias, o que pode gerar desorganização e perda de produtividade.
+## Descrição
 
-## 💡Solução
-A aplicação oferece um gerenciador de tarefas simples, que permite registrar e acompanhar atividades de forma prática. Adcionando, Listando e Removendo tarefas, o usuário pode manter sua rotina organizada e aumentar sua produtividade.
+Sistema de gerenciamento de tarefas desenvolvido em C# no console, com integração a API pública de frases motivacionais.
 
-## 👥Público-alvo
-Qualquer pessoa que deseja organizar melhor sua rotina.
+---
 
-## ⚙️Funcionalidades
+## Funcionalidades
+
 - Adicionar tarefas
 - Listar tarefas
 - Remover tarefas
-- Armazenamento em arquivo JSON
+- Exibição de frases motivacionais
+- Integração com API pública
+- Teste de integração automatizado
 
-## 🛠️Tecnologias utilizadas
+---
+
+## Tecnologias Utilizadas
+
 - C#
--.NET
-- xUnit (testes automatizados)
+- .NET
+- Git e GitHub
+- xUnit
+- API ZenQuotes
 
-## ▶️ Como executar
-1. Clone o repositório:
-1. Abra no Visual Studio
-3. Execute o projeto
+---
 
-## 🧪Como rodar os testes
-No Visual Studio:
-- Vá em Test Explorer
-- Clique em "Run All"
+## Integração com API
 
-## 🧹Lint
-dotnet format
+O projeto utiliza a API pública ZenQuotes para buscar frases motivacionais em tempo real.
 
-## 📦Versão
-1.0.0
+---
 
-## 👩‍💻Autora
+## Teste de Integração
+
+Foi implementado um teste automatizado para validar o funcionamento da integração com a API externa.
+
+O teste verifica:
+- conexão com a API;
+- retorno de dados;
+- funcionamento correto da integração.
+
+---
+
+## Como Executar o Projeto
+
+### Clone o repositório
+
+```bash
+git clone https://github.com/heloizadiniz/TaskManager
+```
+
+### Execute o projeto
+
+```bash
+dotnet run
+```
+
+---
+
+## Estrutura do Projeto
+
+- Program.cs → Interface principal do sistema
+- TaskService.cs → Regras de gerenciamento das tarefas
+- MotivacaoService.cs → Integração com API motivacional
+- Tarefa.cs → Modelo das tarefas
+- TaskManager.Tests → Testes automatizados
+
+---
+
+## Fluxo Git Utilizado
+
+Para desenvolvimento da entrega intermediária foi utilizada a branch:
+
+```bash
+entrega-intermediaria
+```
+
+O fluxo incluiu:
+- criação de Issue;
+- desenvolvimento em branch separada;
+- Push para GitHub;
+- Pull Request;
+- Merge na branch principal.
+
+---
+
+## Autora
+
 Heloiza Diniz Figueredo
-
-## 🔗Link Github
