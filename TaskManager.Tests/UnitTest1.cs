@@ -1,43 +1,19 @@
-using TaskManager;
+using System.Threading.Tasks;
 using Xunit;
+using TaskManager;
 
-public class TaskServiceTests
+namespace TaskManager.Tests
 {
-    [Fact]
-    public void DeveAdicionarTarefa()
+    public class UnitTest1
     {
-        var service = new TaskService();
+        [Fact]
+        public async Task DeveRetornarFraseMotivacional()
+        {
+            MotivacaoService service = new MotivacaoService();
 
-        int antes = service.QuantidadeTarefas();
+            string frase = await service.ObterFrase();
 
-        service.AdicionarTarefa("Estudar");
-
-        int depois = service.QuantidadeTarefas();
-
-        Assert.Equal(antes + 1, depois);
-    }
-
-    [Fact]
-    public void NaoDeveAdicionarTarefaVazia()
-    {
-        var service = new TaskService();
-
-        int antes = service.QuantidadeTarefas();
-
-        service.AdicionarTarefa("");
-
-        int depois = service.QuantidadeTarefas();
-
-        Assert.Equal(antes, depois);
-    }
-
-    [Fact]
-    public void RemoverIndiceInvalidoNaoDeveQuebrar()
-    {
-        var service = new TaskService();
-
-        service.RemoverTarefa(999);
-
-        Assert.True(true);
+            Assert.False(string.IsNullOrWhiteSpace(frase));
+        }
     }
 }

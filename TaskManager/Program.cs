@@ -1,11 +1,25 @@
 ﻿using System;
+using System.Threading.Tasks;
 using TaskManager;
 
 class Program
 {
-    static void Main()
+    static async Task Main()
     {
         TaskService service = new TaskService();
+        MotivacaoService motivacao = new MotivacaoService();
+
+        try
+        {
+            string frase = await motivacao.ObterFrase();
+
+            Console.WriteLine("\n===== FRASE MOTIVACIONAL =====");
+            Console.WriteLine(frase);
+        }
+        catch
+        {
+            Console.WriteLine("Não foi possível carregar a frase.");
+        }
 
         while (true)
         {
@@ -32,6 +46,7 @@ class Program
 
                 case "3":
                     Console.Write("Digite o número da tarefa: ");
+
                     if (int.TryParse(Console.ReadLine(), out int index))
                     {
                         service.RemoverTarefa(index);
@@ -40,6 +55,7 @@ class Program
                     {
                         Console.WriteLine("Entrada inválida!");
                     }
+
                     break;
 
                 case "0":
