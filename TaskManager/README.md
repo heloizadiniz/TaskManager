@@ -1,7 +1,8 @@
 # Organizador de Tarefas
 
 ## Link do Deploy
-(cole aqui o link depois do deploy)
+
+Aplicação CLI executada localmente via terminal conforme instruções abaixo.
 
 ---
 
