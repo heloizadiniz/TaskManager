@@ -1,91 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Text.Json;
-using System.Security.Cryptography.X509Certificates;
-
 
 namespace TaskManager
 {
     public class TaskService
     {
         private List<Tarefa> tarefas = new List<Tarefa>();
-        private string caminhoArquivo = "tarefas.json";
-
-        public TaskService()
-        {
-            CarregarDoArquivo();
-        }
 
         public void AdicionarTarefa(string descricao)
         {
             if (!string.IsNullOrWhiteSpace(descricao))
             {
                 tarefas.Add(new Tarefa(descricao));
-                SalvarEmArquivo();
-                Console.WriteLine("Tarefa adicionada!");
+                Console.WriteLine("\n✅ Tarefa adicionada com sucesso!");
             }
             else
             {
-                Console.WriteLine("Tarefa inválida!");
+                Console.WriteLine("\n❌ Tarefa inválida!");
             }
         }
 
         public void ListarTarefas()
         {
-            Console.WriteLine("\n--- Lista de Tarefas ---");
+            Console.WriteLine("\n==============================");
+            Console.WriteLine("       LISTA DE TAREFAS");
+            Console.WriteLine("==============================");
 
             if (tarefas.Count == 0)
             {
                 Console.WriteLine("Nenhuma tarefa cadastrada.");
-                return;
+            }
+            else
+            {
+                for (int i = 0; i < tarefas.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {tarefas[i].Descricao}");
+                }
             }
 
-            for (int i = 0; i < tarefas.Count; i++)
-            {
-                string status = tarefas[i].Concluida ? "[X]" : "[ ]";
-                Console.WriteLine($"{i} - {status} {tarefas[i].Descricao}");
-            }
+            Console.WriteLine("==============================");
         }
 
         public void RemoverTarefa(int index)
         {
+            index--;
+
             if (index >= 0 && index < tarefas.Count)
             {
                 tarefas.RemoveAt(index);
-                SalvarEmArquivo();
-                Console.WriteLine("Tarefa removida!");
+                Console.WriteLine("\n🗑️ Tarefa removida!");
             }
             else
             {
-                Console.WriteLine("Índice inválido!");
+                Console.WriteLine("\n❌ Número inválido!");
             }
         }
-
-        private void SalvarEmArquivo()
-        {
-            string json = JsonSerializer.Serialize(tarefas);
-            File.WriteAllText(caminhoArquivo, json);
-        }
-
-        private void CarregarDoArquivo()
-        {
-            if (File.Exists(caminhoArquivo))
-            {
-                string json = File.ReadAllText(caminhoArquivo);
-                tarefas = JsonSerializer.Deserialize<List<Tarefa>>(json) ?? new List<Tarefa>();
-            }
-
-        }
-        public int QuantidadeTarefas()
-        {
-            return tarefas.Count;
-        }
-
     }
-
-
 }
