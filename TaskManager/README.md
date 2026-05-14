@@ -1,11 +1,13 @@
-﻿# Organizador de Tarefas
+# Organizador de Tarefas
 
 ## Link do Deploy
+(cole aqui o link depois do deploy)
 
+---
 
 ## Descrição
 
-Sistema de gerenciamento de tarefas desenvolvido em C# no console, com integração a API pública de frases motivacionais.
+Sistema de gerenciamento de tarefas desenvolvido em C# no console, com integração à API pública de frases motivacionais.
 
 ---
 
@@ -41,6 +43,7 @@ O projeto utiliza a API pública ZenQuotes para buscar frases motivacionais em t
 Foi implementado um teste automatizado para validar o funcionamento da integração com a API externa.
 
 O teste verifica:
+
 - conexão com a API;
 - retorno de dados;
 - funcionamento correto da integração.
@@ -82,6 +85,7 @@ entrega-intermediaria
 ```
 
 O fluxo incluiu:
+
 - criação de Issue;
 - desenvolvimento em branch separada;
 - Push para GitHub;
