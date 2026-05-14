@@ -1,4 +1,4 @@
-﻿# Organizador de Tarefas
+# Organizador de Tarefas
 
 ## Link do Deploy
 (cole aqui o link depois do deploy)
